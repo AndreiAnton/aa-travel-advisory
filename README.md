@@ -6,3 +6,4 @@ external libraries and modules
 @react-google-maps/api
 @material-ui/icons
 google-map-react
+axios
