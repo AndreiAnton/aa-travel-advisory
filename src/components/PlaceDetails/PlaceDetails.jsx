@@ -19,6 +19,16 @@ const classes = useStyles();
 
             <CardContent>
                 <Typography gutterBottom variant="h5">{place.name}</Typography>
+                <Box display="flex" justifyContent="space-between" my={2}>
+                    <Rating name="read-only" value={Number(place.rating)} readOnly />
+                    <Typography component="legend">{place.num_reviews} review{place.num_reviews > 1 && 's'}</Typography>
+                </Box>
+                <Box display="flex" justifyContent="space-between">
+                    <Typography component="legend">Price</Typography>
+                    <Typography gutterBottom variant="subtitle1">
+                        {place.price_level}
+                    </Typography>
+                </Box>
                 <Box display="flex" justifyContent="space-between">
                     <Typography variant="subtitle1">Ranking</Typography>
                     <Typography gutterBottom variant="subtitle1">{place.ranking}</Typography>
